@@ -1,10 +1,15 @@
 package com.sontekin.fid.service;
 
-public class GreetingService {
-    private final String greeting;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
-    public GreetingService(String greeting) {
-        this.greeting = greeting;
+@Service
+public class GreetingService {
+    @Value("${app.greeting}")
+    private String greeting;
+
+    public GreetingService() {
+        super();
     }
 
     public String getGreeting(String name) {

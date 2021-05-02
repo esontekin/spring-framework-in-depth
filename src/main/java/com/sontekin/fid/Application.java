@@ -2,7 +2,6 @@ package com.sontekin.fid;
 
 import com.sontekin.fid.config.ApplicationConfig;
 import com.sontekin.fid.service.OutputService;
-import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

@@ -1,5 +1,6 @@
 package com.sontekin.fid.service;
 
+import com.sontekin.fid.aspect.Counter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ public class OutputService {
         this.timeService = timeService;
     }
 
+    @Counter
     public void generateOutput() {
         String output = timeService.getCurrentTime() + " " + greetingService.getGreeting(name);
         System.out.println(output);

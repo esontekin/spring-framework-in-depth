@@ -1,5 +1,6 @@
 package com.sontekin.fid.service;
 
+import com.sontekin.fid.aspect.Counter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public class TimeService {
         super();
     }
 
+    @Counter
     public String getCurrentTime() {
         LocalDateTime now = LocalDateTime.now();
         if (is24){

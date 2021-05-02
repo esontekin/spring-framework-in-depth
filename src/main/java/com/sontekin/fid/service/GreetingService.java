@@ -1,5 +1,6 @@
 package com.sontekin.fid.service;
 
+import com.sontekin.fid.aspect.Counter;
 import com.sontekin.fid.aspect.Loggable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ public class GreetingService {
     }
 
     @Loggable
+    @Counter
     public String getGreeting(String name) {
         return greeting + " " + name;
     }
